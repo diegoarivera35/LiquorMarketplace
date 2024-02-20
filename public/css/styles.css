@@ -9,6 +9,10 @@ h2{
   padding-top: 20px;
 }
 
+.icon {
+  max-width: 50px;
+}
+
 .header {
   display: flex;
   justify-content: space-between;

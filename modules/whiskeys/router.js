@@ -14,7 +14,7 @@ router.use(express.json());
 router.get("/", async (request, response) => {
   let whiskeys = await model.getWhiskeys();
 
-  response.render("admin/menu-admin", { pageTitle: "Administer menu whiskeys", menu: whiskeys });
+  response.render("admin/menu-admin", { pageTitle: "Administer whiskeys", menu: whiskeys });
 })
 router.get("/add", async (request, response) => {
   let whiskeys = await model.getWhiskeys(); //we just need this because the menu-add template is using the common layout, which needs the whiskeys for displaying the main menu in the header

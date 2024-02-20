@@ -8,7 +8,7 @@ dotenv.config();
 
 //import page routes
 const pageRouter = require("./modules/pages/router");
-const adminMenuRouter = require("./modules/menuWhiskeys/router");
+const adminMenuRouter = require("./modules/whiskeys/router");
 
 //set up Express app and port number
 const app = express();
