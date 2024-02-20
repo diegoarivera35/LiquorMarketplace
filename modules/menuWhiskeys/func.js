@@ -21,9 +21,9 @@ async function getWhiskeys() {
 }
 
 //Function to insert document into menuWhiskeys collection using insertOne().
-async function addWhiskey(whiskeys) {
+async function addWhiskey(whiskey) {
   db = await connection();
-  let status = await db.collection("Whiskey").insertOne(whiskey);
+  let status = await db.collection("whiskeys").insertOne(whiskey);
   console.log("whiskey added");
 }
 
@@ -31,7 +31,7 @@ async function addWhiskey(whiskeys) {
 async function deleteWhiskey(id) { 
   db = await connection(); 
   const deleteIdFilter = { _id: new ObjectId(id) }; 
-  const result = await db.collection("Whiskeys").deleteOne(deleteIdFilter); 
+  const result = await db.collection("whiskeys").deleteOne(deleteIdFilter); 
   if (result.deletedCount === 1) 
     console.log("delete successful"); 
 } 
@@ -40,7 +40,7 @@ async function deleteWhiskey(id) {
 async function getSingleWhiskey(id) { 
   db = await connection(); 
   const editIdFilter = { _id: new ObjectId(id) }; 
-  const result = db.collection("Whiskey").findOne(editIdFilter); 
+  const result = db.collection("whiskeys").findOne(editIdFilter); 
   return result; 
 } 
 
