@@ -1,0 +1,30 @@
+extends ../common/layout 
+
+block layout-content 
+  .header.container
+    h2.page-title Administer Liquors Items in the Data Base 
+    a.btn.btn-primary(href="/admin/menu/add") + Add new item 
+  .container
+    table.table.table-bordered.border-secundary
+      thead 
+        tr 
+          th Name 
+          th Brand 
+          th Origin 
+          th Price 
+          th Image URL 
+          th Action
+      tbody 
+        each whiskey in whiskeys 
+          tr 
+            td #{whiskey.name}
+            td #{whiskey.brand}
+            td #{whiskey.origin}
+            td #{whiskey.price} 
+            td #{whiskey.image_url} 
+            td
+              form(action="/admin/menu/delete")
+                input(type="hidden", name="whiskeyId", value=whiskey._id)
+                button.btn.btn-danger(type="submit") Delete
+
+              

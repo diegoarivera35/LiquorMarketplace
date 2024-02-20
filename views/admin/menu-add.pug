@@ -1,0 +1,35 @@
+extends ../common/layout 
+
+block layout-content 
+  h2.page-title Add a Whiskey to the DB
+  .container
+    form(method="post", action="/admin/menu/add/submit")
+      div.mb-1.mt-2
+        label.form-label(for="name") Name: 
+        input.form-control(type="text", min="0", id="name", name="name")
+      div.mb-1.mt-2
+        label.form-label(for="brand") Brand: 
+        input.form-control(type="text", id="brand", name="brand", placeholder="e.g. Jameson")
+      div.mb-1.mt-2
+        label.form-label(for="origin") Origin: 
+        input.form-control(type="text", id="origin", name="origin", placeholder="e.g. Scotland")
+      div.mb-1.mt-2
+        label.form-label(for="price") Link text: 
+        input.form-control(type="number", id="price", name="price", placeholder="e.g. 100")
+      div.mb-1.mt-2
+        label.form-label(for="image_url") Image URL: 
+        input.form-control(type="text", id="image_url", name="image_url", placeholder="e.g. https://example.com/Jameson.jpg")
+      button.btn.btn-primary.mt-2(type="submit") + Add Item
+
+
+  //- form(method="post", action="/admin/menu/add/submit")
+  //-   div 
+  //-     label(for="wgt") Weight: 
+  //-     input(type="number", min="0", id="wgt", name="weight")
+  //-   div 
+  //-     label(for="href") Link path: 
+  //-     input(type="text", id="href", name="path", placeholder="e.g. /contact")
+  //-   div 
+  //-     label(for="link-name") Link text: 
+  //-     input(type="text", id="link-name", name="name", placeholder="e.g. Contact")
+  //-   button(type="submit") Add link
