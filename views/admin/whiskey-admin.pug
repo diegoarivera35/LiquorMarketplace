@@ -3,7 +3,7 @@ extends ../common/layout
 block layout-content 
   .header.container
     h2.page-title Administer Liquors Items in the Data Base 
-    a.btn.btn-primary(href="/admin/menu/add") + Add new item 
+    a.btn.btn-primary(href="/admin/whiskey/add") + Add new item 
   .container
     table.table.table-bordered.border-secundary
       thead 
@@ -23,7 +23,7 @@ block layout-content
             td #{whiskey.price} 
             td #{whiskey.image_url} 
             td
-              form(action="/admin/menu/delete")
+              form(action="/admin/whiskey/delete")
                 input(type="hidden", name="whiskeyId", value=whiskey._id)
                 button.btn.btn-danger(type="submit") Delete
 

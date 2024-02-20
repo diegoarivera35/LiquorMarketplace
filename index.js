@@ -23,7 +23,7 @@ app.use(express.static(path.join(__dirname, "public")));
 
 //USE PAGE ROUTES FROM MODULE
 app.use("/", pageRouter);
-app.use("/admin/menu", adminMenuRouter);
+app.use("/admin/whiskey", adminMenuRouter);
 
 //start server listening
 app.listen(port, () => {

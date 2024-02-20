@@ -14,12 +14,12 @@ router.use(express.json());
 router.get("/", async (request, response) => {
   let whiskeys = await model.getWhiskeys();
 
-  response.render("admin/menu-admin", { pageTitle: "Administer whiskeys", menu: whiskeys });
+  response.render("admin/whiskey-admin", { pageTitle: "Administer whiskeys", menu: whiskeys });
 })
 router.get("/add", async (request, response) => {
   let whiskeys = await model.getWhiskeys(); //we just need this because the menu-add template is using the common layout, which needs the whiskeys for displaying the main menu in the header
 
-  response.render("admin/menu-add", { pageTitle: "Add menu link", whiskeys: whiskeys });
+  response.render("admin/whiskey-add", { pageTitle: "Add liquor", whiskeys: whiskeys });
 });
 /* router.get("/edit", async (request, response) => {
   if (request.query.linkId) {
@@ -45,14 +45,14 @@ router.post("/add/submit", async (request, response) => {
   let newWhiskey = { "name": name, "brand": brand, "origin": origin, "price": price, "image_url": image_url}
   model.addWhiskey(newWhiskey); //insert new link to menuWhiskeys
 
-  response.redirect("/admin/menu");
+  response.redirect("/admin/whiskey");
 })
 
 router.get("/delete", async (request, response) => {
   //for a GET form, field values are passed in request.query.<field_name> because we're retrieving from a query string
   let id = request.query.whiskeyId;
   await model.deleteWhiskey(id);
-  response.redirect("/admin/menu");
+  response.redirect("/admin/whiskey");
 });
 /* router.post("/edit/submit", async (request, response) => {
   //fill out this code
