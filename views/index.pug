@@ -1,15 +1,11 @@
 extends common/layout
 
 block layout-content 
-  h2.page-title Whiskey World Premium Selection
-  div.container
-    each whiskey in whiskeys
-        .card(style='width: 18rem;')
-          .card-body
-            h4.card-title #{whiskey.brand}
-            p.card-text.description #{whiskey.name} 
-            p.card-text.origin #{whiskey.origin} 
-            img.card-img-top(src=whiskey.image_url alt='Card image cap')
-            .cta
-              p.card-text.price $#{whiskey.price} CAD
-              a.btn.btn-primary(href=whiskey.path) buy
+  .video-background
+    .video-foreground
+      iframe(src='https://www.youtube.com/embed/W0LHTWG-UmQ?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&playlist=W0LHTWG-UmQ' frameborder='0' allowfullscreen='' allow='autoplay')
+
+  div.home
+    img(src='images/iconLiquorMaketplaceWhite.svg' alt='logoSVG')
+    h1.page-title.text-light  World's Whiskeys Premium Selection
+    a.btn.btn-light(href='/products') Visit our products

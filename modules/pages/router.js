@@ -6,9 +6,9 @@ pageRouter.get("/", async (request, response) => {
   whiskeys = await Whiskeys.getWhiskeys();
   response.render("index", { pageTitle: "Home", whiskeys: whiskeys });
 });
-pageRouter.get("/about", async (request, response) => {
+pageRouter.get("/products", async (request, response) => {
   whiskeys = await Whiskeys.getWhiskeys();
-  response.render("about", { pageTitle: "About", whiskeys: whiskeys });
+  response.render("products", { pageTitle: "products", whiskeys: whiskeys });
 });
 
 module.exports = pageRouter;

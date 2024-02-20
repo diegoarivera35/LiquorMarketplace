@@ -1,0 +1,15 @@
+extends common/layout
+
+block layout-content 
+  h2.page-title  World's Whiskeys Premium Selection
+  div.container
+    each whiskey in whiskeys
+        .card(style='width: 18rem;')
+          .card-body
+            h4.card-title #{whiskey.brand}
+            p.card-text.description #{whiskey.name} 
+            p.card-text.origin #{whiskey.origin} 
+            img.card-img-top(src=whiskey.image_url alt='Card image cap')
+            .cta
+              p.card-text.price $#{whiskey.price} CAD
+              a.btn.btn-primary(href='#') buy
