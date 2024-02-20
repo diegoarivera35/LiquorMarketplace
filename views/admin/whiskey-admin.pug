@@ -9,19 +9,19 @@ block layout-content
       thead 
         tr 
           th Name 
-          th Brand 
-          th Origin 
-          th Price 
-          th Image URL 
+          th.hidesm Brand 
+          th.hidesm.hidemd Origin 
+          th.hidesm Price 
+          th.hidesm.hidemd Image URL 
           th Action
       tbody 
         each whiskey in whiskeys 
           tr 
             td #{whiskey.name}
-            td #{whiskey.brand}
-            td #{whiskey.origin}
-            td #{whiskey.price} 
-            td #{whiskey.image_url} 
+            td.hidesm #{whiskey.brand}
+            td.hidesm.hidemd #{whiskey.origin}
+            td.hidesm #{whiskey.price} 
+            td.hidesm.hidemd #{whiskey.image_url} 
             td
               form(action="/admin/whiskey/delete")
                 input(type="hidden", name="whiskeyId", value=whiskey._id)

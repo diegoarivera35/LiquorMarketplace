@@ -12,7 +12,7 @@ async function connection() {
   return db;
 }
 
-//Function to return all documents from the menuWhiskeys collection.
+//Function to return all documents from the Whiskeys collection.
 async function getWhiskeys() {
   db = await connection();
   let results = db.collection("whiskeys").find({}); //select all
@@ -20,7 +20,7 @@ async function getWhiskeys() {
   return resultsArray;
 }
 
-//Function to insert document into menuWhiskeys collection using insertOne().
+//Function to insert document into Whiskeys collection using insertOne().
 async function addWhiskey(whiskey) {
   db = await connection();
   let status = await db.collection("whiskeys").insertOne(whiskey);

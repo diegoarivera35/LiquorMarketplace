@@ -25,6 +25,10 @@ h2{
   line-height: 0;
 }
 
+.container {
+  justify-content: center;
+}
+
 .card-img-top {
   max-height: 200px !important;
   max-width: 100% !important;
@@ -83,4 +87,35 @@ footer {
   bottom: 0;
   width: 100%;
   margin-top: 50px;
+}
+
+
+
+
+
+
+/*  responsive  */
+
+/* Make table responsive */
+
+
+/* Set table styles for medium devices */
+
+
+
+
+
+/* Set table styles for small devices */
+@media screen and (max-width: 576px) {
+  .hidesm {
+    display: none;
+  }
+
+}
+
+@media screen and (max-width: 1200px) {
+  .hidemd {
+    display: none;
+  }
+
 }
