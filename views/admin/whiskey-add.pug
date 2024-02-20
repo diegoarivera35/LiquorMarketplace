@@ -3,7 +3,7 @@ extends ../common/layout
 block layout-content 
   h2.page-title Add a Whiskey to the DB
   .container
-    form(method="post", action="/admin/menu/add/submit")
+    form(method="post", action="/admin/whiskey/add/submit")
       div.mb-1.mt-2
         label.form-label(for="name") Name: 
         input.form-control(type="text", min="0", id="name", name="name")
